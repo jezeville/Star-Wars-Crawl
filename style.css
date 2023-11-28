@@ -1,1 +1,13 @@
+body{
+    background-image : url('starwars.jpg');
+    background-repeat : no-repeat;
+    background-size: cover;
+}
+p{
+    color:lightblue;
+    text-align : center;
+    width : 60% ;
+    margin : auto;
+    font-size : 60px;
 
+}
