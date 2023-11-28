@@ -1,13 +1,54 @@
-body{
+
+html,
+body {
+    width: 100%;
+    height: 100%;
     background-image : url('starwars.jpg');
     background-repeat : no-repeat;
     background-size: cover;
+    margin: 0;
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-p{
-    color:lightblue;
-    text-align : center;
-    width : 60% ;
-    margin : auto;
-    font-size : 60px;
 
+
+
+.crawl {
+    position:absolute;
+    left: 50%;
+    width: 800px;
+    margin: 0 0 0 -400px;
+    top: auto;
+    bottom: 0;
+    height: 50em;
+    color: lightblue;    
+    font-size: 64px;
+    text-align: justify;
+    transform-origin: center bottom;
+    transform: perspective(300px) rotateX(15deg);
+}
+
+.crawl > div {
+    position: absolute;
+    top: 100%; 
+    animation-duration: 30s;
+    animation-name: crawl;
+}
+
+@keyframes crawl {
+    0% {
+        top: 100%;
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 0;
+        opacity: 0;
+    }
 }
